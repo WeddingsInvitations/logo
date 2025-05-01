@@ -1,33 +1,26 @@
-body {
-  margin: 0;
-  background-color: black;
-  overflow: hidden;
-}
-
 .logo-container {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
 
-/* Gaya umum */
 .logo {
   position: absolute;
-  width: 100px;
+  width: 100px; /* pastikan ukurannya tetap */
   opacity: 0;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
 
-/* Logo 1 masuk dari kanan ke kiri (posisi kiri) */
+/* Logo 1 (muncul dari kanan ke kiri dari kanan pojok ke kiri logo 2) */
 .logo1 {
   top: 40%;
   right: -150px;
   animation-name: moveLogo1;
 }
 
-/* Logo 2 masuk dari bawah ke tengah */
+/* Logo 2 (tengah) */
 .logo2 {
   bottom: -150px;
   left: 50%;
@@ -35,31 +28,31 @@ body {
   animation-name: moveLogo2;
 }
 
-/* Logo 3 masuk dari kiri ke kanan (posisi kanan) */
+/* Logo 3 (muncul dari kiri ke kanan dari kiri pojok ke kanan logo 2) */
 .logo3 {
   top: 40%;
   left: -150px;
   animation-name: moveLogo3;
 }
 
-/* Animasi masing-masing */
+/* Titik akhir animasi */
 @keyframes moveLogo1 {
   to {
-    right: 60%;
+    left: calc(50% - 100px - 10px); /* Logo 2 center - logo1 width - margin */
     opacity: 1;
   }
 }
 
 @keyframes moveLogo2 {
   to {
-    bottom: 60%;
+    bottom: 40%;
     opacity: 1;
   }
 }
 
 @keyframes moveLogo3 {
   to {
-    left: 60%;
+    left: calc(50% + 100px + 10px); /* Logo 2 center + logo2 width + margin */
     opacity: 1;
   }
 }
