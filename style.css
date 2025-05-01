@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
+.logo-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  opacity: 0;
+}
+
+/* Logo 1 (R terbalik) muncul dari kanan */
+.logo1 {
+  top: 20%;
+  right: -150px;
+  transform: scaleX(-1); /* Membalik horizontal */
+  animation: moveLogo1 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Logo 2 (batang P) muncul dari bawah */
+.logo2 {
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveLogo2 2s ease-out forwards;
+  animation-delay: 2s;
+}
+
+/* Logo 3 (lengkungan P) muncul dari kiri */
+.logo3 {
+  top: 20%;
+  left: -150px;
+  animation: moveLogo3 2s ease-out forwards;
+  animation-delay: 3.5s;
+}
+
+/* Animasi Logo 1 (ke kiri logo2) */
+@keyframes moveLogo1 {
+  to {
+    right: 55%;
+    opacity: 1;
+  }
+}
+
+/* Animasi Logo 2 (dari bawah ke tengah) */
+@keyframes moveLogo2 {
+  to {
+    bottom: 40%;
+    opacity: 1;
+  }
+}
+
+/* Animasi Logo 3 (ke kanan logo2) */
+@keyframes moveLogo3 {
+  to {
+    left: 55%;
+    opacity: 1;
+  }
+}
