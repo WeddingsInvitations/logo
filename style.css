@@ -1,59 +1,51 @@
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+
 .logo-container {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .logo {
   position: absolute;
-  width: 100px;
+  width: 80px;
+  transition: all 2s ease;
   opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
 }
 
-/* Pict 1: dari kanan ke kiri, ke kiri pict 2 (jarak 50px) */
+/* posisi awal */
 .logo1 {
   top: 10%;
-  right: -120px;
-  animation-name: moveLogo1;
+  right: -100px;
 }
 
-/* Pict 2: dari bawah ke atas (top: 40% → top: 10%) */
 .logo2 {
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
-  animation-name: moveLogo2;
 }
 
-/* Pict 3: dari kiri ke kanan, ke kanan pict 2 (jarak 50px) */
 .logo3 {
   top: 10%;
-  left: -120px;
-  animation-name: moveLogo3;
+  left: -100px;
 }
 
-/* Animasi */
-@keyframes moveLogo1 {
-  to {
-    right: calc(50% - 50px); /* 50% - width logo2 - jarak 50px */
-    opacity: 1;
-  }
+/* posisi akhir */
+.animate .logo1 {
+  right: calc(50% + 90px); /* 50% posisi tengah + jarak 50 + setengah lebar gambar */
+  opacity: 1;
 }
 
-@keyframes moveLogo2 {
-  to {
-    top: 10%;
-    opacity: 1;
-  }
+.animate .logo2 {
+  top: 10%;
+  opacity: 1;
 }
 
-@keyframes moveLogo3 {
-  to {
-    left: calc(50% - 50px); /* 50% + width logo2 + jarak 50px */
-    opacity: 1;
-  }
+.animate .logo3 {
+  left: calc(50% + 90px);
+  opacity: 1;
 }
