@@ -36,7 +36,7 @@ body {
 
 /* posisi akhir */
 .animate .logo1 {
-  right: calc(50% + 90px); /* 50% posisi tengah + jarak 50 + setengah lebar gambar */
+  right: calc(50% + 20px); /* 50% posisi tengah + jarak 50 + setengah lebar gambar */
   opacity: 1;
 }
 
@@ -46,6 +46,6 @@ body {
 }
 
 .animate .logo3 {
-  left: calc(50% + 90px);
+  left: calc(50% + 20px);
   opacity: 1;
 }
