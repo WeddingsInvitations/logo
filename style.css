@@ -14,7 +14,7 @@ body {
   position: absolute;
   width: 100px; /* pastikan ukurannya tetap */
   opacity: 0;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -28,7 +28,7 @@ body {
 
 /* Logo 2 (tengah) */
 .logo2 {
-  bottom: -150px;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
   animation-name: moveLogo2;
@@ -44,7 +44,7 @@ body {
 /* Titik akhir animasi */
 @keyframes moveLogo1 {
   to {
-    left: calc(50% - 10px); /* Logo 2 center - logo1 width - margin */
+    left: calc(50% - 50px); /* Logo 2 center - logo1 width - margin */
     opacity: 1;
   }
 }
@@ -58,7 +58,7 @@ body {
 
 @keyframes moveLogo3 {
   to {
-    left: calc(50% + 10px); /* Logo 2 center + logo2 width + margin */
+    left: calc(50% + 50px); /* Logo 2 center + logo2 width + margin */
     opacity: 1;
   }
 }
