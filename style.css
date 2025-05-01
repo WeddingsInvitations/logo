@@ -39,7 +39,7 @@
 /* Animasi */
 @keyframes moveLogo1 {
   to {
-    left: calc(50% - 50px); /* 50% - width logo2 - jarak 50px */
+    right: calc(50% - 50px); /* 50% - width logo2 - jarak 50px */
     opacity: 1;
   }
 }
