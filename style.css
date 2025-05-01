@@ -12,6 +12,7 @@ body {
 
 .logo {
   position: absolute;
+  height:auto;
   width: 80px;
   transition: all 1.5s ease;
   opacity: 0;
